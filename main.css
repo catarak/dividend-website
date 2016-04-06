@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6, ul {
 * {
 	box-sizing: border-box;
 	color: #F5FF00;
-	font-family: "Nimbus Sans", sans-serif;
+	font-family: "Archivo Black", sans-serif;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 }
 
 .app__title {
-	font-size: 50px;
+	font-size: 64px;
 	text-transform: uppercase;
 	width: 100%;
 }

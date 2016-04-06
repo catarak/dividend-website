@@ -61,3 +61,10 @@
 	font-style: italic;
 	font-stretch: condensed;
 }
+
+@font-face {
+	font-family: "Archivo Black";
+	src: url('fonts/ArchivoBlack/ArchivoBlack.woff2') format('woff2'),
+			 url('fonts/ArchivoBlack/ArchivoBlack.woff') format('woff'),
+			 url('fonts/ArchivoBlack/ArchivoBlack.ttf') format('truetype');
+}
