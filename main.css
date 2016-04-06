@@ -118,6 +118,7 @@ body {
 	display: flex;
 	width: 100%;
 	max-width: 900px;
+	font-size: 20px;
 }
 
 .purchase__column {
@@ -131,4 +132,5 @@ body {
 
 .purchase__column-copy {
 	text-align: left;
+	margin-bottom: 30px;
 }
