@@ -1,6 +1,4 @@
-Dividend is a new digital currency with people in mind. While cryptocurrencies, such as Bitcoin, are by design philosophically neutral, most choose to implement a system of capitalism. Dividend is inspired by ideas of socialism, with the goal of empowering people. To be a part of this community, you can opt in, and get your share. 
+Dividend is a new digital currency with the goal of empowering the community. While cryptocurrencies, such as Bitcoin, are by design philosophically neutral, most choose to implement a system of capitalism. Dividend is inspired by ideas of socialism, exploring the ways in which people can own a share of a piece of art. To be a part of this community, you can opt in, and get your share. 
 
-To purchase:
-create an account on Counterwallet, or download indiesquare.
-put in your address 
-receive Dividend coins
+<insert all of the links in here>
+To receive your share, create an account on Counterwallet, or download the mobile wallet Indiesquare. Once your wallet has been created, paste the address into the form below, and wait to receive your Dividend coins. You can also purchase coins by searching "DIVIDENDPLUS" in the counterparty market exchange.
