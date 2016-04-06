@@ -7,15 +7,20 @@
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="fonts.css">
 	<link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script src="main.js"></script>
 </head>
 <body class="app">
 	<header class="app__header">
 		<ul class="app__header-items">
-			<li class="app__header-item">
-				<a class="app__about">About</a>
+			<li class="app__header-item--logo">
+				<a class="app__logo-button" href="#" id="logo"><img class="app__logo" src="Coin3-NoStroke.svg"></a> 
 			</li>
 			<li class="app__header-item">
-				<a class="app__purchase">Purchase</a>
+				<a class="app__about-button" href="#" id="about">About</a>
+			</li>
+			<li class="app__header-item">
+				<a class="app__purchase-button" href="#" id="purchase">Purchase</a>
 			</li>
 		</ul>
 	</header>
@@ -24,6 +29,35 @@
 			<h1 class="app__title">Dividend</h1>	
 			<div class="app__coin-wrapper">
 				<img class="app__coin" src="BigCoin07.png" alt="Dividend">
+			</div>
+		</div>
+	</section>
+	<section class="app__about" id="about-section">
+		<div class="app__about-copy">
+			<h2 class="app__about-copy-byline">
+				Dividend is a new digital currency with the goal of empowering communities.
+			</h2>
+			<p class="app__about-copy-section">
+				While cryptocurrencies, such as Bitcoin, are by design philosophically neutral, most choose to implement a system of capitalism. Dividend is inspired by ideas of socialism, exploring the ways in which people can own a share of a piece of art. To be a part of this community, you can opt in, and get your share. 
+			</p>
+			<p>
+				Dividend is built on top of the Bitcoin blockchain, and is implemented using a project called Counterparty.
+			</p>
+		</div>
+	</section>
+	<section class="app__purchase" id="purchase-section">
+		<div class="app__purchase-inner-wrapper">
+			<div class="purchase__column">
+				<h3 class="purchase__column-header">Get a Wallet</h3>
+				<p class="purchase__column-copy">
+					You need a wallet to hold your Dividend coins, just like you use a wallet in real life to hold your physical money. 
+				</p>
+			</div>
+			<div class="purchase__column">
+				<h3>Receive Coins</h3>
+				<p>
+					stuff
+				</p>
 			</div>
 		</div>
 	</section>
