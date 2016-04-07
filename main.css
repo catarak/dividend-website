@@ -15,10 +15,14 @@ h1 {
 	font-family: "Archivo Black", sans-serif;
 }
 
-/*a, a:hover {
-	text-decoration: none;
+a:hover, button:hover {
+	color: #FDFFCD;
 }
-*/
+
+a:hover:after {
+	color: #F5FF00;
+}
+
 * {
 	box-sizing: border-box;
 	color: #F5FF00;
