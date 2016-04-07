@@ -134,3 +134,31 @@ body {
 	text-align: left;
 	margin-bottom: 30px;
 }
+
+.purchase__form {
+	margin-bottom: 30px;
+	padding: 30px 10px;
+	border: 2px dashed;
+	border-radius: 5px;
+}
+
+.purchase__form-address {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid;
+	outline: none;
+	width: 100%;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.purchase__form-address:focus {
+	outline: none;
+}
+
+.purchase__form-button {
+	background-color: #242424;
+	border: 2px solid;
+	cursor: pointer;
+	font-size: 20px;
+}

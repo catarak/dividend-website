@@ -13,4 +13,8 @@ $(function() {
 		e.preventDefault();
 		$("html, body").animate({scrollTop: 0}, 500);
   });
+
+  $("#purchase-form").submit(function(e) {
+		e.preventDefault();
+  });
 });
