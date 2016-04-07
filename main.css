@@ -1,54 +1,60 @@
 /* coin gray #919498 */
-
+/* 425 small */
 html, body {
-	margin: 0;
-	min-height: 100%;
-	height: 100%;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, ul, p {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-	font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", sans-serif;
 }
 
 a:hover, button:hover {
-	color: #FDFFCD;
+  color: #FDFFCD;
 }
 
 a:hover:after {
-	color: #F5FF00;
+  color: #F5FF00;
 }
 
 * {
-	box-sizing: border-box;
-	color: #F5FF00;
-	font-family: 'Cutive Mono', monospace;
-	text-transform: none;
+  box-sizing: border-box;
+  color: #F5FF00;
+  font-family: 'Cutive Mono', monospace;
+  text-transform: none;
 }
 
 body {
-	background-color: #242424;
-	border-top: 10px solid;
+  background-color: #242424;
+  border-top: 10px solid;
+  font-size: 16px;
+}
+@media screen and (min-width: 426px) {
+  body {
+    font-size: 20px;
+  }
 }
 
 .app__header {
-	padding: 30px 0;
+  padding: 30px 0;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
 .app__header-items {
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	align-items: baseline;
-	justify-content: flex-end;
-	position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-end;
+  position: relative;
 }
 
 .app__header-item--logo {
@@ -58,111 +64,140 @@ body {
 }
 
 .app__logo {
-	height: 25px;
+  height: 25px;
 }
 
 .app__title {
-	font-size: 64px;
-	text-transform: uppercase;
-	width: 100%;
+  font-size: 64px;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .app__about-button, .app__purchase-button {
-	padding: 0 20px;
-	text-transform: uppercase;
-	position: relative;
-	text-decoration: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: none;
 }
 
 .app__about-button::hover, .app__purchase-button::hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
-
 .app__about-button::after {
-	content: "/";
-	position: absolute;
-	right: -5px;
+  content: "/";
+  position: absolute;
+  right: -5px;
 }
 
 .app__coin-wrapper {
-	min-width: 0;
+  min-width: 0;
 }
 
 .app__coin {
-	height: auto;
-	width: 100%;
-	max-width: 800px;
-	margin: -60px;
+  height: auto;
+  width: 100%;
+  max-width: 800px;
+}
+@media (min-width: 426px) {
+  .app__coin {
+    margin: -60px;
+  }
 }
 
 .app__splash, .app__about, .app__purchase {
-	display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-	text-align: center;
-	height: 100%;
+  text-align: center;
+}
+
+.app__splash {
+  height: 100%;
+}
+
+.app__about, .app__purchase {
+  padding: 0 10px;
+  padding-top: 70px;
+}
+@media (min-width: 426px) {
+  .app__about, .app__purchase {
+    height: 100%;
+    padding: 0;
+  }
 }
 
 .app__about-copy {
-	max-width: 800px;
-	font-size: 20px;
-	line-height: 2em;
+  max-width: 800px;
+  line-height: 2em;
 }
 
 .app__about-copy-byline {
-	margin-bottom: 60px;
+  margin-bottom: 30px;
+}
+@media (min-width: 426px) {
+  .app__about-copy-byline {
+    margin-bottom: 60px;
+  }
 }
 
 .app__about-copy-section {
-	margin-bottom: 60px;
+  margin-bottom: 30px;
+}
+@media (min-width: 426px) {
+  .app__about-copy-section {
+    margin-bottom: 60px;
+  }
 }
 
 .app__purchase-inner-wrapper {
-	display: flex;
-	width: 100%;
-	max-width: 900px;
-	font-size: 20px;
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
 }
 
 .purchase__column {
-	width: 50%;
-	padding: 10px;
+  width: 100%;
+  padding: 10px;
+}
+@media (min-width: 900px) {
+	.purchase__column {
+		width: 50%;
+	}
 }
 
 .purchase__column-header {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .purchase__column-copy {
-	text-align: left;
-	margin-bottom: 30px;
+  text-align: left;
+  margin-bottom: 30px;
 }
 
 .purchase__form {
-	margin-bottom: 30px;
-	padding: 30px 10px;
-	border: 2px dashed;
-	border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 30px 10px;
+  border: 2px dashed;
+  border-radius: 5px;
 }
 
 .purchase__form-address {
-	background-color: transparent;
-	border: 0;
-	border-bottom: 2px solid;
-	outline: none;
-	width: 100%;
-	font-size: 20px;
-	margin-bottom: 30px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid;
+  outline: none;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .purchase__form-address:focus {
-	outline: none;
+  outline: none;
 }
 
 .purchase__form-button {
-	background-color: #242424;
-	border: 2px solid;
-	cursor: pointer;
-	font-size: 20px;
+  background-color: #242424;
+  border: 2px solid;
+  cursor: pointer;
 }
