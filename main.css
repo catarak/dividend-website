@@ -15,23 +15,27 @@ h1 {
   font-family: "Archivo Black", sans-serif;
 }
 
+h1, h2, h3 {
+	text-align: center;
+}
+
 a:hover, button:hover {
-  color: #FDFFCD;
+  color: #FDDF31;
 }
 
 a:hover:after {
-  color: #F5FF00;
+  color: #2157AF;
 }
 
 * {
   box-sizing: border-box;
-  color: #F5FF00;
-  font-family: 'Cutive Mono', monospace;
+  color: #2157AF;
+  font-family: Arial;
   text-transform: none;
 }
 
 body {
-  background-color: #242424;
+  background-color: #FEFEFE;
   border-top: 10px solid;
   font-size: 16px;
 }
@@ -92,6 +96,7 @@ body {
 
 .app__coin-wrapper {
   min-width: 0;
+  text-align: center;
 }
 
 .app__coin {
@@ -109,7 +114,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: justify;
 }
 
 .app__splash {
@@ -129,7 +134,6 @@ body {
 
 .app__about-copy {
   max-width: 800px;
-  line-height: 2em;
 }
 
 .app__about-copy-byline {
@@ -172,7 +176,6 @@ body {
 }
 
 .purchase__column-copy {
-  text-align: left;
   margin-bottom: 30px;
 }
 
@@ -181,6 +184,7 @@ body {
   padding: 30px 10px;
   border: 2px dashed;
   border-radius: 5px;
+  text-align: center;
 }
 
 .purchase__form-address {
@@ -197,7 +201,7 @@ body {
 }
 
 .purchase__form-button {
-  background-color: #242424;
+  background-color: #FEFEFE;
   border: 2px solid;
   cursor: pointer;
 }
