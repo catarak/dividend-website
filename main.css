@@ -19,23 +19,38 @@ h1, h2, h3 {
 	text-align: center;
 }
 
+a {
+
+}
+
 a:hover, button:hover {
-  color: #FDDF31;
+  /*color: #FFFF72;*/
+  color: #96979A;
 }
 
 a:hover:after {
-  color: #2157AF;
+  color: #000;
 }
+
+/*.app__logo-button, .app__about-button, .app__purchase-button {
+	border-bottom: none;
+  box-shadow: none;
+}
+
+.app__logo-button:hover, .app__about-button:hover, .app__purchase-button:hover {
+	background-color: transparent;
+}*/
 
 * {
   box-sizing: border-box;
-  color: #2157AF;
+  color: #000;
   font-family: Arial;
   text-transform: none;
 }
 
 body {
   background-color: #FEFEFE;
+  /*background-color: #ECECEC;*/
   border-top: 10px solid;
   font-size: 16px;
 }
