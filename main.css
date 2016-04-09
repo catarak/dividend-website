@@ -87,16 +87,28 @@ body {
 }
 
 .app__title {
-  font-size: 64px;
+  font-size: 52px;
   text-transform: uppercase;
   width: 100%;
 }
+@media screen and (min-width: 426px) {
+	.app__title {
+		font-size: 64px;
+	}
+}
 
 .app__about-button, .app__purchase-button {
-  padding: 0 20px;
   text-transform: uppercase;
   position: relative;
   text-decoration: none;
+}
+
+.app__about-button {
+	padding-right: 20px;
+}
+
+.app__purchase-button {
+	padding: 0 20px;
 }
 
 .app__about-button::hover, .app__purchase-button::hover {
@@ -149,6 +161,7 @@ body {
 
 .app__about-copy {
   max-width: 800px;
+  padding: 10px;
 }
 
 .app__about-copy-byline {
@@ -219,4 +232,8 @@ body {
   background-color: #FEFEFE;
   border: 2px solid;
   cursor: pointer;
+}
+
+.wallet-address {
+	font-size: 14px;
 }
