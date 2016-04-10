@@ -21,8 +21,11 @@ app.get('/', function (req, res) {
 app.post('/transactions', function(req, res) {
 	var address = req.body.address;
 	//validate address
+	console.log(address);
 	exec("./yes.exp " + address, function(error, stdout, stderr) { 
+		console.log(error);
 		console.log(stdout);
+		console.log(stderr);
 	});
 	res.send("cool stuff!");
 });
