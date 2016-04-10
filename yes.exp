@@ -6,6 +6,7 @@ set timeout 1000
 spawn ./transaction.sh -d $address
 
 expect "Sign and broadcast? (y/N) "
-send "y^M"
+send "y"
+send "\r"
 
 interact
