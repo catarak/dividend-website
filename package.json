@@ -1,0 +1,27 @@
+{
+  "name": "dividend-website",
+  "version": "1.0.0",
+  "description": "website for dividend plus payment automation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catarak/dividend-website.git"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "socialism"
+  ],
+  "author": "Cassie Tarakajian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/catarak/dividend-website/issues"
+  },
+  "homepage": "https://github.com/catarak/dividend-website#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "serve-favicon": "^2.3.0"
+  }
+}
