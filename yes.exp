@@ -1,8 +1,9 @@
 #!/usr/bin/expect
 
+set address [lindex $argv 0];
 set timeout 1000
 
-spawn "./transaction.sh"
+spawn ./transaction.sh -d $address
 
 expect "Sign and broadcast? (y/N) "
 send "y^M"

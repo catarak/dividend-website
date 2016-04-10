@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var sys = require('sys')
+var exec = require('child_process').exec;
 
 app.use(express.static('public'));
 
@@ -20,7 +22,9 @@ app.get('/', function (req, res) {
 app.post('/transactions', function(req, res) {
 	var address = req.body.address;
 	//validate address
-	console.log(address);
+	exec("./yes.exp " + address, function(error, stdout, stderr) { 
+		console.log(stdout);
+	});
 	res.send("cool stuff!");
 });
 
