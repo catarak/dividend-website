@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var sys = require('sys')
 var exec = require('child_process').exec;
 
 app.use(express.static('public'));
