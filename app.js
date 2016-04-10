@@ -28,16 +28,16 @@ app.post('/transactions', function(req, res) {
 	console.log(address);
 	transaction = spawn('./yes.exp', [address]);
 	transaction.stdout.on('data', function (data) {
-	  console.log('stdout: ' + data);
+	  console.log('' + data);
 	});
 
-	transaction.stderr.on('data', function (data) {
-	  console.log('stderr: ' + data);
-	});
+	// transaction.stderr.on('data', function (data) {
+	//   console.log('stderr: ' + data);
+	// });
 
-	transaction.on('exit', function (code) {
-	  console.log('child process exited with code ' + code);
-	});
+	// transaction.on('exit', function (code) {
+	//   console.log('child process exited with code ' + code);
+	// });
 	res.send("cool stuff!");
 });
 
