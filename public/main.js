@@ -16,5 +16,9 @@ $(function() {
 
   $("#purchase-form").submit(function(e) {
 		e.preventDefault();
+    var address = $('#wallet-address').val();
+    $.post('/transactions', {address: address}, function(data) {
+      $('#wallet-address').val(""); 
+    });
   });
 });
