@@ -17,8 +17,18 @@ $(function() {
   $("#purchase-form").submit(function(e) {
 		e.preventDefault();
     var address = $('#wallet-address').val();
-    $.post('/transactions', {address: address}, function(data) {
-      $('#wallet-address').val(""); 
+
+    $.get("https://counterpartychain.io/api/address/" + address, function(data) {
+      var response = JSON.parse(data);
+      if (data.success) {
+        $.post('/transactions', {address: address}, function(data) {
+          $('#wallet-address').val(""); 
+          $('#submission-info').text("Request received");
+        });
+      }
+      else {
+        $('#submission-info').text("Invalid wallet address");
+      }
     });
   });
 });

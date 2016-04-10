@@ -253,10 +253,12 @@ body {
 .purchase__form-address {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid;
+  border: 2px solid;
   outline: none;
   width: 100%;
   margin-bottom: 30px;
+  font-size: 18px;
+  padding: 5px;
 }
 
 .purchase__form-address:focus {
@@ -267,6 +269,13 @@ body {
   background-color: #FEFEFE;
   border: 2px solid;
   cursor: pointer;
+  font-size: 18px;
+}
+
+.purchase__form-info {
+  min-height: 33px;
+  height: 33px;
+  padding-bottom: 10px;
 }
 
 .wallet-address {
