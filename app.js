@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var transaction;
+
+var util = require('util');
+var spawn = require('child_process').spawn;
 var exec = require('child_process').exec;
 
 app.use(express.static('public'));
@@ -22,11 +26,18 @@ app.post('/transactions', function(req, res) {
 	var address = req.body.address;
 	//validate address
 	console.log(address);
-	exec("./yes.exp " + address, function(error, stdout, stderr) { 
-		console.log(error);
-		console.log(stdout);
-		console.log(stderr);
+	transaction = spawn('./yes.exp', [address]);
+	transaction.stdout.on('data', function (data) {
+	  console.log(data);
 	});
+
+	// transaction.stderr.on('data', function (data) {
+	//   console.log('stderr: ' + data);
+	// });
+
+	// transaction.on('exit', function (code) {
+	//   console.log('child process exited with code ' + code);
+	// });
 	res.send("cool stuff!");
 });
 
