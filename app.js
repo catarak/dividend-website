@@ -7,6 +7,19 @@ var util = require('util');
 var spawn = require('child_process').spawn;
 var exec = require('child_process').exec;
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/dividend');
+var Schema = mongoose.Schema;
+
+var UserSchema = new Schema({
+    wallet_address: { type: String, required: true, trim: true }
+},
+{
+    timestamps: true
+});
+
+var User = mongoose.model('User', UserSchema);
+
 app.use(express.static('public'));
 
 var favicon = require('serve-favicon');
@@ -24,21 +37,25 @@ app.get('/', function (req, res) {
 
 app.post('/transactions', function(req, res) {
 	var address = req.body.address;
-	//validate address
-	console.log(address);
-	transaction = spawn('./yes.exp', [address]);
-	transaction.stdout.on('data', function (data) {
-	  console.log('' + data);
+	User.find({wallet_address: address}, function(err, results) {
+		if (results.length === 0) {
+			transaction = spawn('./yes.exp', [address]);
+			transaction.stdout.on('data', function (data) {
+			  console.log('' + data);
+			});
+			//somehow check if transaction is signed successfully
+			var user = new User({wallet_address: address});
+			user.save(function(err, result) {
+				if (err) {
+					console.log(err);
+				}
+				res.send({success: true});
+			});
+		}
+		else {
+			res.send({success: false, message: "Dividend already sent."})
+		}
 	});
-
-	// transaction.stderr.on('data', function (data) {
-	//   console.log('stderr: ' + data);
-	// });
-
-	// transaction.on('exit', function (code) {
-	//   console.log('child process exited with code ' + code);
-	// });
-	res.send("cool stuff!");
 });
 
 app.listen(8080, function () {

@@ -20,10 +20,15 @@ $(function() {
 
     $.get("https://counterpartychain.io/api/address/" + address, function(data) {
       var response = JSON.parse(data);
-      if (data.success) {
+      if (response.success) {
         $.post('/transactions', {address: address}, function(data) {
+          if (data.success) {
+            $('#submission-info').text("Request received");
+          }
+          else {
+            $('#submission-info').text("Dividend already claimed");
+          }
           $('#wallet-address').val(""); 
-          $('#submission-info').text("Request received");
         });
       }
       else {
