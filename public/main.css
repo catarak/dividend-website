@@ -44,7 +44,7 @@ a:hover:after {
 * {
   box-sizing: border-box;
   color: #000;
-  font-family: Arial;
+  font-family: Helvetica, Arial, sans-serif;
   text-transform: none;
 }
 
@@ -189,6 +189,10 @@ body {
   }
 }
 
+.app__purchase {
+  border-bottom: 10px solid black;
+}
+
 .app__about-copy {
   max-width: 800px;
   padding: 10px;
@@ -232,6 +236,14 @@ body {
 	.purchase__column {
 		width: 50%;
 	}
+
+  .purchase__column.left {
+    padding-right: 30px;
+  }
+
+  .purchase__column.right {
+    padding-left: 30px;
+  }
 }
 
 .purchase__column-header {
@@ -245,9 +257,14 @@ body {
 .purchase__form {
   margin-bottom: 30px;
   padding: 30px 10px;
-  border: 2px dashed;
-  border-radius: 5px;
   text-align: center;
+  background-color: #ECECEC;
+}
+
+@media (min-width: 436px) {
+  .purchase__form {
+    padding: 30px 20px;
+  }
 }
 
 .purchase__form-address {
@@ -266,7 +283,7 @@ body {
 }
 
 .purchase__form-button {
-  background-color: #FEFEFE;
+  background-color: #ECECEC;
   border: 2px solid;
   cursor: pointer;
   font-size: 18px;
