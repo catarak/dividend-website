@@ -36,6 +36,8 @@ app.get('/', function (req, res) {
 });
 
 app.post('/transactions', function(req, res) {
+	console.log(req.connection.remoteAddress);
+	console.log(req.headers['x-forwarded-for']);
 	var address = req.body.address;
 	User.find({wallet_address: address}, function(err, results) {
 		if (results.length === 0) {
@@ -56,6 +58,7 @@ app.post('/transactions', function(req, res) {
 			res.send({success: false, message: "Dividend already sent."})
 		}
 	});
+	// res.send({success: true});
 });
 
 app.listen(8080, function () {
