@@ -12,7 +12,8 @@ mongoose.connect('mongodb://localhost/dividend');
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    wallet_address: { type: String, required: true, trim: true }
+    wallet_address: { type: String, required: true, trim: true },
+    ip_address: { type: String, required: true, trim: true }
 },
 {
     timestamps: true
@@ -38,7 +39,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/transactions', function(req, res) {
-	console.log(req.ip);
+	var ipAddress = req.ip;
 	var address = req.body.address;
 	User.find({wallet_address: address}, function(err, results) {
 		if (results.length === 0) {
@@ -47,7 +48,7 @@ app.post('/transactions', function(req, res) {
 			  console.log('' + data);
 			});
 			//somehow check if transaction is signed successfully
-			var user = new User({wallet_address: address});
+			var user = new User({wallet_address: address, ip_address: ipAddress});
 			user.save(function(err, result) {
 				if (err) {
 					console.log(err);
