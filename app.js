@@ -31,13 +31,14 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
+app.enable('trust proxy');
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.post('/transactions', function(req, res) {
-	console.log(req.connection.remoteAddress);
-	console.log(req.headers['x-forwarded-for']);
+	console.log(req.ip);
 	var address = req.body.address;
 	User.find({wallet_address: address}, function(err, results) {
 		if (results.length === 0) {
