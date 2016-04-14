@@ -32,6 +32,10 @@ a:hover:after {
   color: #000;
 }
 
+p {
+  line-height: 1.3em;
+}
+
 /*.app__logo-button, .app__about-button, .app__purchase-button {
 	border-bottom: none;
   box-shadow: none;
@@ -164,7 +168,13 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: justify;
+  text-align: left;
+}
+
+@media (min-width: 436px) {
+  .app__splash, .app__about, .app__purchase {
+    text-align: justify;
+  }
 }
 
 
@@ -238,11 +248,11 @@ body {
 	}
 
   .purchase__column.left {
-    padding-right: 30px;
+    padding-right: 50px;
   }
 
   .purchase__column.right {
-    padding-left: 30px;
+    padding-left: 50px;
   }
 }
 
@@ -297,4 +307,9 @@ body {
 
 .wallet-address {
 	font-size: 14px;
+}
+@media (min-width: 321px) {
+  .wallet-address {
+    font-size: inherit;
+  }
 }
