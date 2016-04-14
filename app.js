@@ -38,6 +38,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/dividendplus.json', function(req, res) {
+	res.setHeader('Content-Type', 'application/json');
+	res.sendFile(path.join(__dirname + '/dividendplus.json'));
+});
+
 app.post('/transactions', function(req, res) {
 	var ipAddress = req.ip;
 	var address = req.body.address;
