@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var fs = require("fs");
 var transaction;
 
 var util = require('util');
@@ -34,13 +35,15 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.enable('trust proxy');
 
+var coinsFilePath = path.join(__dirname, '/dividendplus.json');
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.get('/dividendplus.json', function(req, res) {
-	res.setHeader('Content-Type', 'application/json');
-	res.sendFile(path.join(__dirname + '/dividendplus.json'));
+	var readable = fs.createReadStream(coinsFilePath);
+  readable.pipe(res);
 });
 
 app.post('/transactions', function(req, res) {
