@@ -313,3 +313,13 @@ body {
     font-size: inherit;
   }
 }
+
+
+.img-indiesquare {
+  width: 100%;
+  max-width: 285px;
+}
+
+.img-counterwallet {
+  width: 100%;
+}

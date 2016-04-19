@@ -41,6 +41,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/indiesquare-instructions', function(req, res) {
+	res.sendFile(path.join(__dirname + '/indiesquare.html'));
+});
+
+app.get('/counterwallet-instructions', function(req, res) {
+	res.sendFile(path.join(__dirname + '/counterwallet.html'));
+});
+
 app.get('/dividendplus.json', function(req, res) {
 	var readable = fs.createReadStream(coinsFilePath);
   readable.pipe(res);
