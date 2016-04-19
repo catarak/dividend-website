@@ -18,22 +18,20 @@ $(function() {
 		e.preventDefault();
     var address = $('#wallet-address').val();
 
-    $.get("https://counterpartychain.io/api/address/" + address, function(data) {
-      var response = JSON.parse(data);
-      if (response.success) {
-        $.post('/transactions', {address: address}, function(data) {
-          if (data.success) {
-            $('#submission-info').text("Request received");
-          }
-          else {
-            $('#submission-info').text("Dividend already claimed");
-          }
-          $('#wallet-address').val(""); 
-        });
-      }
-      else {
-        $('#submission-info').text("Invalid wallet address");
-      }
-    });
+    var valid = WAValidator.validate(address, 'bitcoin');
+    if(valid) {
+      $.post('/transactions', {address: address}, function(data) {
+        if (data.success) {
+          $('#submission-info').text("Request received");
+        }
+        else {
+          $('#submission-info').text("Dividend already claimed");
+        }
+        $('#wallet-address').val(""); 
+      });
+    }
+    else {
+      $('#submission-info').text("Invalid wallet address");
+    }
   });
 });
