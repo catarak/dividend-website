@@ -314,12 +314,51 @@ body {
   }
 }
 
+.app__purchase {
+  min-height: 100%;
+  height: initial;
+  padding-top: 70px;
+}
+
 
 .img-indiesquare {
   width: 100%;
   max-width: 285px;
+  margin: 0 auto;
+  display: block;
 }
 
 .img-counterwallet {
   width: 100%;
+}
+
+.instructions-list {
+  margin: 0 auto;
+  max-width: 700px;
+  padding-right: 40px;
+}
+
+.instructions-heading {
+  padding: 20px 0;
+}
+
+.instructions-list li {
+  margin-bottom: 20px;
+}
+
+.instructions-list p + img {
+  margin-top: 20px;
+}
+
+.purchase__additional-instructions {
+  padding: 40px 10px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 436px) {
+  .purchase__additional-instructions {
+    padding: 100px 0;
+  }
 }
