@@ -8,19 +8,19 @@ var util = require('util');
 var spawn = require('child_process').spawn;
 var exec = require('child_process').exec;
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/dividend');
-var Schema = mongoose.Schema;
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/dividend');
+// var Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
-    wallet_address: { type: String, required: true, trim: true },
-    ip_address: { type: String, required: true, trim: true }
-},
-{
-    timestamps: true
-});
+// var UserSchema = new Schema({
+//     wallet_address: { type: String, required: true, trim: true },
+//     ip_address: { type: String, required: true, trim: true }
+// },
+// {
+//     timestamps: true
+// });
 
-var User = mongoose.model('User', UserSchema);
+// var User = mongoose.model('User', UserSchema);
 
 app.use(express.static('public'));
 
