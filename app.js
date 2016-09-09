@@ -55,28 +55,28 @@ app.get('/dividendplus.json', function(req, res) {
 });
 
 app.post('/transactions', function(req, res) {
-	var ipAddress = req.ip;
-	var address = req.body.address;
-	User.find({wallet_address: address}, function(err, results) {
-		if (results.length === 0) {
-			transaction = spawn('./yes.exp', [address]);
-			transaction.stdout.on('data', function (data) {
-			  console.log('' + data);
-			});
-			//somehow check if transaction is signed successfully
-			var user = new User({wallet_address: address, ip_address: ipAddress});
-			user.save(function(err, result) {
-				if (err) {
-					console.log(err);
-				}
-				res.send({success: true});
-			});
-		}
-		else {
-			res.send({success: false, message: "Dividend already sent."})
-		}
-	});
-	// res.send({success: true});
+	// var ipAddress = req.ip;
+	// var address = req.body.address;
+	// User.find({wallet_address: address}, function(err, results) {
+	// 	if (results.length === 0) {
+	// 		transaction = spawn('./yes.exp', [address]);
+	// 		transaction.stdout.on('data', function (data) {
+	// 		  console.log('' + data);
+	// 		});
+	// 		//somehow check if transaction is signed successfully
+	// 		var user = new User({wallet_address: address, ip_address: ipAddress});
+	// 		user.save(function(err, result) {
+	// 			if (err) {
+	// 				console.log(err);
+	// 			}
+	// 			res.send({success: true});
+	// 		});
+	// 	}
+	// 	else {
+	// 		res.send({success: false, message: "Dividend already sent."})
+	// 	}
+	// });
+	res.send({success: true});
 });
 
 app.listen(8080, function () {
